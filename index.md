@@ -1,1 +1,0 @@
-# qhall.github.io
