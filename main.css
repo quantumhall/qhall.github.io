@@ -45,7 +45,7 @@ header {
 }
 
 .section:nth-child(1) {
-  background-image: url('celery.jpg') no-repeat; max-width:100%;
+  background-image: url('bigback.jpg') no-repeat; max-width:100%;
   color: #000;
   top: 0;
   z-index: 1;
