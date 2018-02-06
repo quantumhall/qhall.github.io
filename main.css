@@ -45,11 +45,11 @@ header {
 }
 
 .section:nth-child(1) {
-  background: url(celery.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: url('celery.jpg');
+  -o-background-size:100% auto;
+  -webkit-background-size:100% auto;
+  -moz-background-size:100% auto;
+  background-size:100% auto; 
   color: #000;
   top: 0;
   z-index: 1;
@@ -88,11 +88,11 @@ header {
 .section:nth-child(4) {
   -webkit-box-shadow: inset 0 1px 80px rgba(0, 0, 0, 0.14);
           box-shadow: inset 0 1px 80px rgba(0, 0, 0, 0.14);
-  background: url(whitebuilding.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: url('whitebuilding.jpg');
+  -o-background-size:100% auto;
+  -webkit-background-size:100% auto;
+  -moz-background-size:100% auto;
+  background-size:100% auto;
   color: #fff;
   top: 300vh;
   z-index: 4;
