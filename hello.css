@@ -1,0 +1,164 @@
+@use postcss-cssnext;
+
+/* ••·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•· */
+:root {
+	--animation-delay: 500ms;
+	--duration: 3700ms;
+	--iterations: 1;
+}
+/* ••·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•· */
+
+
+.reveal-text,
+.reveal-text::after {
+	animation-delay: var(--animation-delay);
+	animation-iteration-count: var(--iterations);
+	animation-duration: var(--duration);
+	animation-fill-mode: both;
+	animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.reveal-text {
+	position: relative;
+	font-size: 10vw;
+	display: block;
+	user-select: none;
+	animation-name: reveal-text;
+	color: rgb(0,0,0);
+	white-space: nowrap;
+	cursor: default;
+	
+	&::after {
+		content: "";
+		position: absolute;
+		z-index: 999;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgb(25,25,112);
+		transform: scaleX(0);
+		transform-origin: 0 50%;
+		pointer-events: none;
+		animation-name: revealer-text;
+	}
+	
+}
+
+
+@keyframes reveal-text {
+	from {
+		clip-path: inset(0 100% 0 0);
+	}
+	to {
+		clip-path: inset(0 0 0 0);
+	}
+}
+
+
+@keyframes revealer-text {
+	
+	0%, 50% {
+		transform-origin: 0 50%;
+	}
+	
+	60%, 100% {
+		transform-origin: 100% 50%;		
+	}
+
+	
+	60% {
+		transform: scaleX(1);
+	}
+	
+	100% {
+		transform: scaleX(0);
+	}
+}
+
+
+
+.text-js{
+  opacity: 0;
+}
+.cursor{
+  display: block;
+  visibility: hidden;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: -5px;
+  width: 2px;
+  /* Change colour of Cursor Here */
+  background-color: black;
+  z-index: 1;
+  animation: flash 0.5s none infinite alternate;
+}
+@keyframes flash{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+
+
+h3{
+  margin: 20px;
+  color: black;
+  font-size: 28px;
+  text-align: center;
+  letter-spacing: 5px;
+  font-weight: 50;
+  margin: 0;
+  padding: 0;
+  boz-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  }
+
+
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:100');
+
+.hidden {
+  opacity:0;
+}
+.console-container {
+ 
+  font-family:'Alegreya Sans', sans-serif;
+  font-size:18px;
+  text-align:center;
+  height:3%;
+  width:600px;
+  display:block;
+  position:absolute;
+  color:rgb(95,159,160);
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+}
+.console-underscore {
+   display:inline-block;
+  position:relative;
+  top:-0.14em;
+  left:10px;
+}
+
+
+#logo {
+animation:4s ease 2s normal forwards 1 fadein;
+-webkit-animation:4s ease 2s normal forwards 1 fadein;
+opacity:0
+}
+
+@keyframes fadein{from{opacity:0}
+to{opacity:1}
+}
+
+@-webkit-keyframes fadein{from{opacity:0}
+to{opacity:1}
+}
