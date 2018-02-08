@@ -1,5 +1,5 @@
 // function([string1, string2],target id,[color1,color2])    
-consoleText(['Broken?','is this a joke?'], 'text',['#fff','#fff']);
+consoleText(['Broken?','is this a joke?'], 'text',['#7B6C69','#7B6C69']);
 
 function consoleText(words, id, colors) {
   if (colors === undefined) colors = ['#fff'];
@@ -61,3 +61,6 @@ var aE = document.querySelectorAll('a:not(.notThis)');
         e.preventDefault();
     };
 });
+
+
+
