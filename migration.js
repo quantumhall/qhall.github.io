@@ -10,16 +10,16 @@ function txt() {
   ctx.fillText(t, (c.width - ctx.measureText(t).width) * 0.5, c.height * 0.5);
 }
 
-var rad = 250, til = 1, num = 5;
+var rad = 250, til = 0.5, num = 5;
 var alph = 0.9, pov = 100; 
 var midX = w / 2, midY = h / 2;
 var maxZ = pov - 2, cnt = til - 1; 
 var _arr = {}, dump = {};
 var spX = 0.1, spY = 0.1, spZ = 0.1;
-var grav = -0, psz = 5;
+var grav = 5, psz = 5;
 var xMid = 0, yMid = 0, zMid = -3 - rad;
 var dth = -750, ang = 0; 
-var sp = 2 * Math.PI / 360;
+var sp = 1 * Math.PI / 360;
 anim();
 
 function anim() {
